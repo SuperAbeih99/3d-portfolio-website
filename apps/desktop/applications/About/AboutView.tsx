@@ -311,9 +311,9 @@ function ExperienceSubView(params: SubViewParams) {
           </p>
 
           <h2>CodePath – Applied AI Engineering</h2>
-          <p>Feb 2025 – Present</p>
+          <p>Nov 2025 – Present</p>
           <p>
-            I joined CodePath in February 2025. CodePath runs industry-backed
+            I joined CodePath in November 2025. CodePath runs industry-backed
             tech courses that teach students practical skills for real-world
             software roles. I began the Applied AI Engineering course with
             CodePath in February 2026 to go deeper into AI engineering.
