@@ -301,6 +301,24 @@ function ExperienceSubView(params: SubViewParams) {
           <h1 className={styles["page-h1"]}>
             {t("about.navigation.experience")}
           </h1>
+          <h2>ColorStack Member</h2>
+          <p>Nov 2025 – Present</p>
+          <p>
+            I became a ColorStack member in November 2025. ColorStack is a
+            community that supports Black and Latinx computer science students
+            through mentorship, events, academic support, and career
+            opportunities.
+          </p>
+
+          <h2>CodePath – Applied AI Engineering</h2>
+          <p>Feb 2025 – Present</p>
+          <p>
+            I joined CodePath in February 2025. CodePath runs industry-backed
+            tech courses that teach students practical skills for real-world
+            software roles. I began the Applied AI Engineering course with
+            CodePath in February 2026 to go deeper into AI engineering.
+          </p>
+
           <h2>
             Secretary at Institute of Electrical Engineers Club | The City
             College of New York
@@ -322,7 +340,8 @@ function ExperienceSubView(params: SubViewParams) {
             Computer Science.
           </p>
 
-          <h2>Founder &amp; Coach | Bensonhurst FC jan 2025 – Present</h2>
+          <h2>Founder &amp; Coach | Bensonhurst FC</h2>
+          <p>Jan 2025 – Present</p>
           <ul>
             <li>
               Founded a community soccer club to provide affordable training and
@@ -338,22 +357,6 @@ function ExperienceSubView(params: SubViewParams) {
               improve ball control, dribbling, and tactical awareness.
             </li>
           </ul>
-
-          <h2>ColorStack Member (Nov 2025 – Present)</h2>
-          <p>
-            I became a ColorStack member in November 2025. ColorStack is a
-            community that supports Black and Latinx computer science students
-            through mentorship, events, academic support, and career
-            opportunities.
-          </p>
-
-          <h2>CodePath – Applied AI Engineering (Nov 2025 – Present)</h2>
-          <p>
-            I joined CodePath in November 2025. CodePath runs industry-backed
-            tech courses that teach students practical skills for real-world
-            software roles. I began the Applied AI Engineering course with
-            CodePath in February 2026 to go deeper into AI engineering.
-          </p>
 
           <DownloadCv translate={params.translate} />
 
@@ -377,23 +380,21 @@ function ProjectsSubView(params: SubViewParams) {
           </h1>
           <div className={styles["project-entry"]}>
             <h3>FinancePal</h3>
-            <p>
-              MERN Stack | MongoDB | Express.js | React | Node.js
-            </p>
+            <p>MERN Stack | MongoDB | Express.js | React | Node.js</p>
             <ul>
               <li>
                 Developed and deployed a full-stack expense tracking application
                 allowing users to log, categorize, and visualize expenses with
-                interactive charts
+                interactive charts.
               </li>
               <li>
                 Implemented JWT authentication, responsive dashboards, and PDF
-                export functionality for financial reports
+                export functionality for financial reports.
               </li>
             </ul>
             <p>
               <a
-                href="https://financepalfrontend-mu.vercel.app/login"
+                href="https://financepal-mern.vercel.app/login"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -411,32 +412,24 @@ function ProjectsSubView(params: SubViewParams) {
           </div>
 
           <div className={styles["project-entry"]}>
-            <h3>CareerLink</h3>
-            <p>
-              MERN Stack | MongoDB | Express.js | React | Node.js
-            </p>
+            <h3>3D Portfolio Room</h3>
+            <p>Next.js | React | TypeScript | Three.js | Blender</p>
             <ul>
               <li>
-                Built a full-stack job portal enabling job seekers to browse,
-                filter, and apply to postings while employers manage listings
-                and view applicants
+                Built an interactive 3D "bedroom" scene with a retro computer
+                that users can orbit, zoom into, and explore as a playful entry
+                point to my portfolio.
               </li>
               <li>
-                Designed a mobile-friendly interface and implemented resume
-                upload, saved jobs, and application tracking features
+                Modeled and exported custom assets from Blender, optimized glTF
+                loading, and implemented camera controls/animations for a
+                smooth, game-like browsing experience.
               </li>
             </ul>
             <p>
+              Live Demo (Coming Soon) |{" "}
               <a
-                href="https://career-link-frontend-five.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Website
-              </a>{" "}
-              |{" "}
-              <a
-                href="https://github.com/SuperAbeih99/CareerLink"
+                href="https://github.com/SuperAbeih99/PortfolioWebsite"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -446,23 +439,25 @@ function ProjectsSubView(params: SubViewParams) {
           </div>
 
           <div className={styles["project-entry"]}>
-            <h3>ResumeBuilder</h3>
-            <p>
-              MERN Stack | MongoDB | Express.js | React | Node.js
-            </p>
+            <h3>MediGuard AI</h3>
+            <p>Next.js | React | TypeScript | Supabase | OpenAI API</p>
             <ul>
               <li>
-                Created a resume creation platform with multiple templates,
-                live preview, and drag-and-drop section reordering
+                Built an AI-powered hospital bill assistant that lets patients
+                upload PDFs/images or paste text, select their insurance
+                provider, and receive plain-language explanations of charges,
+                coverage, and red flags.
               </li>
               <li>
-                Integrated PDF export, draft saving, and shareable public resume
-                links for quick access
+                Designed a clean, mobile-friendly interface with guest sessions
+                and sign-in flow so users can quickly run analyses while
+                authenticated users can securely save and revisit previous
+                results.
               </li>
             </ul>
             <p>
               <a
-                href="https://resumebuilder-frontend-brown.vercel.app/"
+                href="https://mediguardai.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -470,7 +465,7 @@ function ProjectsSubView(params: SubViewParams) {
               </a>{" "}
               |{" "}
               <a
-                href="https://github.com/SuperAbeih99/ResumeBuilder"
+                href="https://github.com/SuperAbeih99/mediguard-ai"
                 target="_blank"
                 rel="noreferrer"
               >
