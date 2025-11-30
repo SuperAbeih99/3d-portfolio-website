@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { WindowProps } from "@/components/WindowManagement/WindowCompositor";
 import styles from "./MemesView.module.css";
 
 type MemePayload = {
@@ -82,7 +83,7 @@ const FALLBACK_MEMES: MemeState[] = [
   },
 ];
 
-export default function MemesView() {
+export default function MemesView(_props: WindowProps) {
   const [meme, setMeme] = useState<MemeState | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);

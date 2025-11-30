@@ -2,11 +2,11 @@ import { LocalWindowCompositor } from "@/components/WindowManagement/LocalWindow
 import { Application, ApplicationConfig, MenuEntry } from "../ApplicationManager";
 import { LocalApplicationManager } from "../LocalApplicationManager";
 import { SystemAPIs } from "@/components/OperatingSystem";
-import { WindowContext } from "@/components/WindowManagement/WindowCompositor";
+import { WindowContext, WindowProps } from "@/components/WindowManagement/WindowCompositor";
 import { ApplicationEvent } from "../ApplicationEvents";
 import dynamic from "next/dynamic";
 
-const View = dynamic(() => import("./MemesView"));
+const View = dynamic<WindowProps>(() => import("./MemesView"));
 
 export class MemesConfig implements ApplicationConfig {
   public readonly displayName = "Memes";

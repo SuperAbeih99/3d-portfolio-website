@@ -1,4 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import type { ReactElement } from "react";
+import { WindowProps } from "@/components/WindowManagement/WindowCompositor";
 import styles from "./SnakeView.module.css";
 
 type Point = { x: number; y: number };
@@ -33,7 +35,7 @@ const getRandomPosition = (occupied: Set<string>): Point => {
   return point;
 };
 
-export default function SnakeView() {
+export default function SnakeView(_props: WindowProps) {
   const [snake, setSnake] = useState<Point[]>(() => createInitialSnake());
   const [direction, setDirection] = useState<Point>({ x: 1, y: 0 });
   const [food, setFood] = useState<Point>(() =>
@@ -129,7 +131,7 @@ export default function SnakeView() {
   }, [direction, gameOver, hasFocus]);
 
   const cells = useMemo(() => {
-    const board: JSX.Element[] = [];
+    const board: ReactElement[] = [];
     for (let y = 0; y < GRID_SIZE; y++) {
       for (let x = 0; x < GRID_SIZE; x++) {
         const key = `${x}-${y}`;
