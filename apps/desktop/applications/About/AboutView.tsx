@@ -427,7 +427,6 @@ function ProjectsSubView(params: SubViewParams) {
               </li>
             </ul>
             <p>
-              Live Demo (Coming Soon) |{" "}
               <a
                 href="https://github.com/SuperAbeih99/PortfolioWebsite"
                 target="_blank"
