@@ -1,0 +1,57 @@
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  min-height: 80px;
+  box-sizing: border-box;
+}
+
+.selected img {
+  background-color: rgba(105, 205, 249, 0.7);
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainerInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  display: block;
+  user-select: none;
+}
+
+.title {
+  display: block;
+  text-align: center;
+  user-select: none;
+}
+
+.titleLine {
+  display: block;
+  line-height: 1.2em;
+  padding: 0 5px;
+}
+
+.editInput {
+  width: 100%;
+}
+
+.textContainer {
+  display: block;
+  font-size: 0.8rem;
+  line-height: 16px;
+  color: var(--hamani-text-strong);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+}
+
+.finder-text {
+  color: #000;
+  text-shadow: none;
+}

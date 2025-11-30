@@ -1,0 +1,121 @@
+.menuBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 28px;
+  flex: 0 1 auto;
+  height: 60px;
+  background: linear-gradient(120deg, rgba(8, 15, 36, 0.82), rgba(27, 17, 53, 0.9));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 22px rgba(2, 3, 10, 0.45);
+  color: var(--hamani-text-strong);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  letter-spacing: 0.04em;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  padding-right: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.utility {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.weekday {
+  text-transform: capitalize;
+}
+
+.month {
+  text-transform: capitalize;
+}
+
+.menuEntry {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 12px;
+  font-weight: 600;
+}
+
+.menuEntry span {
+  user-select: none;
+}
+
+.menuEntry button {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  color: inherit;
+  border-radius: 999px;
+  box-shadow: none;
+}
+
+.menuEntry button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.menuContent {
+  display: flex;
+  flex-direction: column;
+  background: rgba(5, 9, 23, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  z-index: 10000;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 8px;
+  margin-top: 10px;
+  box-shadow: 0 14px 34px rgba(3, 4, 12, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.menuContent button {
+  display: block;
+  white-space: nowrap;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: transparent;
+  text-align: left;
+  color: var(--hamani-text-strong);
+  font-size: 0.85rem;
+  padding: 8px 12px;
+}
+
+.menuContent button:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.menuContent button:last-child {
+  margin-bottom: 0;
+}
+
+.menuContent hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 6px 0;
+}

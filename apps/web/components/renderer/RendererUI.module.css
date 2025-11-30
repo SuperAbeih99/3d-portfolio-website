@@ -1,0 +1,229 @@
+.ui {
+  position: relative;
+  z-index: 1;
+}
+
+.cinematic {
+  display: block;
+}
+
+.name-container {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(960px, calc(100% - 32px));
+  padding: 10px 22px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(30, 33, 40, 0.9), rgba(70, 73, 82, 0.92));
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.35);
+  color: #f6f6f6;
+  opacity: 0;
+  pointer-events: none;
+  font-family: 'Metropolis Medium';
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.identity-name {
+  display: block;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.identity-title {
+  display: block;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.status-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.status-clock {
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+.cinematic-container {
+  position: fixed;
+  bottom: 25%;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.cinematic-instructions {
+  font-size: 1.2rem;
+  background-color: #000;
+  padding: 10px 20px;
+  color: #fff;
+  pointer-events: none;
+  opacity: 1;
+  font-family: 'Metropolis Medium';
+}
+
+.fade-out {
+  animation: fade-out 100ms forwards;
+}
+
+.fade-in {
+  animation: fade-in 100ms forwards;
+}
+
+.status-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mute-button,
+.camera-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(145deg, rgba(90, 95, 105, 0.85), rgba(65, 69, 78, 0.9));
+  pointer-events: all;
+  padding: 6px 10px;
+  margin: 0;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.mute-button:hover,
+.camera-button:hover {
+  background: linear-gradient(145deg, rgba(115, 120, 132, 0.9), rgba(82, 86, 95, 0.95));
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.mute-button img,
+.camera-button img {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.time-is-done {
+  min-width: 90px;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .name-container {
+    width: calc(100% - 24px);
+    padding: 10px 16px;
+  }
+
+  .identity-name {
+    font-size: 0.95rem;
+  }
+
+  .identity-title {
+    font-size: 0.85rem;
+  }
+
+  .status-clock {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .name-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .status-meta {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .status-actions {
+    gap: 8px;
+  }
+
+  .time-is-done {
+    min-width: auto;
+    text-align: left;
+  }
+}
+
+@media (max-width: 420px) {
+  .name-container {
+    top: 10px;
+    width: calc(100% - 16px);
+    padding: 8px 12px;
+  }
+
+  .status-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .status-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .mute-button,
+  .camera-button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .mute-button img,
+  .camera-button img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.sound-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  opacity: 1;
+}
+
+.blinking-cursor {
+  display: inline-block;
+  height: 0.2em;
+  width: 0.8em;
+  position: relative;
+  animation: blink 0.65s step-end infinite;
+  margin-left: 0.2em;
+}
+
+@keyframes blink {
+  0%, 100% { background-color: #fff; }
+  50% { background-color: transparent;}
+}
+
+@keyframes fade-out {
+  0% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; visibility: hidden; }
+  100% { opacity: 1; visibility: visible; }
+}

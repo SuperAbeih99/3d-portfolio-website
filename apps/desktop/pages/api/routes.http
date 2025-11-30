@@ -1,0 +1,9 @@
+POST http://localhost:3001/api/contact/
+Content-Type: application/json
+
+{
+    "name": "Abeih Hamani",
+    "email": "abeihhamani24@gmail.com",
+    "company": "Hamani Labs",
+    "message": "foobar123"
+}
