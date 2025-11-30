@@ -44,7 +44,8 @@ export type MenuItemSpacer = {
 export type MenuItem = MenuItemSpacer | MenuItemAction;
 
 export interface MenuDisplayOptions {
-  boldText?: boolean
+  boldText?: boolean,
+  onTitleClick?: () => void
 };
 
 export interface MenuEntry {

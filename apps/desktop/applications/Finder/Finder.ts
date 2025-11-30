@@ -31,7 +31,10 @@ export class Finder extends Application {
 
   menuEntries(): MenuEntry[] {
     return [{
-      displayOptions: { boldText: true },
+      displayOptions: {
+        boldText: true,
+        onTitleClick: () => this.openNewWindow('/Users/abeih/')
+      },
       name: 'Finder',
       items: [
         { kind: 'action', value: 'Open window', action: () => this.openNewWindow('/Users/abeih/') },
@@ -56,6 +59,11 @@ export class Finder extends Application {
   }
 
   on(event: ApplicationEvent, windowContext?: WindowContext): void {
+    if (event.kind === 'application-kill' || event.kind === 'application-quit') {
+      this.manager.quit();
+      return;
+    }
+
     if (event.kind === 'application-open') {
 
       // Do not open a Finder window on the first start, due to the Operating system starting Finder at "boot"

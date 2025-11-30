@@ -38,8 +38,11 @@ function RenderMenu(menuEntries: MenuEntry) {
   }
 
   function onClickMenuTitle() {
+    menuEntries.displayOptions.onTitleClick?.();
+
     if (!ref.current) { return; }
     if (isOpen) { return; }
+    if (menuEntries.items.length === 0) { return; }
 
     const head = ref.current;
     const handleClickAfterOpeningMenu = (evt: PointerEvent)  => onClickAfterOpeningMenu(evt, head);

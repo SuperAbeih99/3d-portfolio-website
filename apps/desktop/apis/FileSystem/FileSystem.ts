@@ -319,7 +319,7 @@ export function createBaseFileSystem(): FileSystem {
 
   // We keep a semi-colon mascot in the trash can :ˆ)
   fileSystem.addImage(trash, 'semi-colon', '.png', '/images/semi-colon.png', "Statement terminator, not trash", true);
-  fileSystem.addImage(trash, 'GTA-VI', '.png', '/images/GTA-VI.png', "Definitely not leaking anything", true);
+  fileSystem.addImage(trash, 'GTA-VI', '.jpg', '/images/GTA-VI.jpg', "Definitely not leaking anything", true);
 
   const binaryDirectory = fileSystem.addDirectory(root, 'bin', false, false);
   fileSystem.addProgram(binaryDirectory, lsConfig);
