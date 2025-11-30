@@ -15,6 +15,12 @@ const DeskName = "Desk";
 const NamePlateName = "NamePlate";
 const FloorName = "Floor";
 
+const DEFAULT_DESKTOP_PROD_URL = "https://abeihhamani.vercel.app/desktop";
+
+function normalizeBaseUrl(url: string): string {
+  return url.endsWith("/") ? url.slice(0, -1) : url;
+}
+
 async function loadTexture(context: AssetManagerContext, asset: string): Promise<Texture> {
   const texture = await context.textureLoader.loadAsync(asset);
 
@@ -60,7 +66,8 @@ function getDesktopTargetUrl(): string {
   const env = process.env.NEXT_PUBLIC_VERCEL_ENV ?? 'local';
 
   if (env === 'production') {
-    return 'https://portfolio-next-desktop.vercel.app/';
+    const configuredUrl = process.env.NEXT_PUBLIC_DESKTOP_PROD_URL ?? DEFAULT_DESKTOP_PROD_URL;
+    return normalizeBaseUrl(configuredUrl);
   }
 
   if (env === 'preview' || env === 'development') {

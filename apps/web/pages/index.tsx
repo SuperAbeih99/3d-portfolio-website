@@ -35,10 +35,10 @@ export default function Web() {
         <meta property="og:title" content="Abeih Hamani - Portfolio" />
         <meta property="og:description" content="Portfolio website of Abeih Hamani, a CCNY Computer Science student focused on web development, AI, and interactive experiences." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://abeihhamani.com/assets/thumbnail.png" />
-        <meta property="og:url" content="https://abeihhamani.com/" />
+        <meta property="og:image" content="https://abeihhamani.vercel.app/assets/thumbnail.png" />
+        <meta property="og:url" content="https://abeihhamani.vercel.app/" />
         
-        <meta property="twitter:image" content="https://abeihhamani.com/assets/thumbnail.png"/>
+        <meta property="twitter:image" content="https://abeihhamani.vercel.app/assets/thumbnail.png"/>
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:title" content="Abeih Hamani's portfolio"/>
         <meta property="twitter:description" content="Portfolio website of Abeih Hamani, a CCNY Computer Science student focused on web development, AI, and interactive experiences."/>
